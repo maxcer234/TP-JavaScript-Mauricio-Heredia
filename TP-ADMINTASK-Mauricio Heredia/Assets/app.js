@@ -12,9 +12,9 @@ function ListarTareas() {
 
 function EditarTarea() {
     if (task.length) {
-        let index = parseInt(prompt("Ingrese el número de la tarea que desea editar (1 a " + task.length + "): ")) - 1;
-        if (index >= 0 && index < task.length) {
-            task[index] = prompt("Ingrese la nueva descripción de la tarea:");
+        let opciones = parseInt(prompt("Ingrese el número de la tarea que desea editar (1 a " + task.length + "): ")) - 1;
+        if (opciones >= 0 && opciones < task.length) {
+            task[opciones] = prompt("Ingrese la nueva descripción de la tarea:");
             alert("Tarea editada: \n" + task.join("\n"));
         } else {
             alert("Índice no válido");
@@ -26,9 +26,9 @@ function EditarTarea() {
 
 function EliminarTarea() {
     if (task.length) {
-        let index = parseInt(prompt("Ingrese el número de la tarea que desea eliminar (1 a " + task.length + "): ")) - 1;
-        if (index >= 0 && index < task.length) {
-            task.splice(index, 1);
+        let opciones = parseInt(prompt("Ingrese el número de la tarea que desea eliminar (1 a " + task.length + "): ")) - 1;
+        if (opciones >= 0 && opciones < task.length) {
+            task.splice(opciones, 1);
             alert("Tarea eliminada: \n" + (task.length ? task.join("\n") : "No hay tareas"));
         } else {
             alert("Índice no válido");
