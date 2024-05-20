@@ -4,6 +4,7 @@ function AgregarTarea() {
     let nuevaTarea = prompt("Ingrese Nueva Tarea");
     task.push(nuevaTarea);
     alert("Tarea Nueva: \n" + task.join("\n"));
+    
 }
 
 function ListarTareas() {
